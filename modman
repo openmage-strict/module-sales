@@ -2,8 +2,10 @@ src/app/code/core/Mage/Sales/                                     app/code/core/
 src/app/design/adminhtml/default/default/layout/sales.xml         app/design/adminhtml/default/default/layout/sales.xml
 src/app/design/adminhtml/default/default/template/sales/          app/design/adminhtml/default/default/template/sales/
 src/app/design/frontend/base/default/layout/sales.xml             app/design/frontend/base/default/layout/sales.xml
+src/app/design/frontend/base/default/template/email/order/        app/design/frontend/base/default/template/email/order/
 src/app/design/frontend/base/default/template/sales/              app/design/frontend/base/default/template/sales/
 src/app/design/frontend/rwd/default/layout/sales.xml              app/design/frontend/rwd/default/layout/sales.xml
+src/app/design/frontend/rwd/default/template/email/order/         app/design/frontend/rwd/default/template/email/order/
 src/app/design/frontend/rwd/default/template/sales/               app/design/frontend/rwd/default/template/sales/
 src/app/etc/modules/Mage_Sales.xml                                app/etc/modules/Mage_Sales.xml
 src/app/locale/en_US/Mage_Sales.csv                               app/locale/en_US/Mage_Sales.csv
