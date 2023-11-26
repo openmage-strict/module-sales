@@ -10,3 +10,4 @@ src/app/design/frontend/rwd/default/template/email/order/         app/design/fro
 src/app/design/frontend/rwd/default/template/sales/               app/design/frontend/rwd/default/template/sales/
 src/app/etc/modules/Mage_Sales.xml                                app/etc/modules/Mage_Sales.xml
 src/app/locale/en_US/Mage_Sales.csv                               app/locale/en_US/Mage_Sales.csv
+src/app/locale/en_US/template/email/sales/                        app/locale/en_US/template/email/sales/
