@@ -1432,7 +1432,7 @@
                 <discount translate="title">
                     <title>Discount</title>
                     <source_field>discount_amount</source_field>
-                    <amount_prefix></amount_prefix>
+                    <amount_prefix/>
                     <title_source_field>discount_description</title_source_field>
                     <font_size>7</font_size>
                     <display_zero>0</display_zero>

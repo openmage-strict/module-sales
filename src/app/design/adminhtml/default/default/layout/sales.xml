@@ -18,32 +18,32 @@
 <layout>
     <adminhtml_sales_order_grid>
         <update handle="formkey"/>
-        <block type="adminhtml/sales_order_grid" name="sales_order.grid" output="toHtml"></block>
+        <block type="adminhtml/sales_order_grid" name="sales_order.grid" output="toHtml"/>
     </adminhtml_sales_order_grid>
 
     <adminhtml_sales_order_index>
         <reference name="content">
-            <block type="adminhtml/sales_order" name="sales_order.grid.container"></block>
+            <block type="adminhtml/sales_order" name="sales_order.grid.container"/>
         </reference>
     </adminhtml_sales_order_index>
 
     <adminhtml_sales_order_transactions>
-        <block type="adminhtml/sales_transactions_grid" name="sales_transactions.grid" output="toHtml"></block>
+        <block type="adminhtml/sales_transactions_grid" name="sales_transactions.grid" output="toHtml"/>
     </adminhtml_sales_order_transactions>
 
     <adminhtml_sales_billing_agreement_index>
         <reference name="content">
-            <block type="sales/adminhtml_billing_agreement" name="sales.billing.agreement.grid.container"></block>
+            <block type="sales/adminhtml_billing_agreement" name="sales.billing.agreement.grid.container"/>
         </reference>
     </adminhtml_sales_billing_agreement_index>
 
     <adminhtml_sales_billing_agreement_grid>
-        <block type="sales/adminhtml_billing_agreement_grid" name="sales.billing.agreement.grid" output="toHtml"></block>
+        <block type="sales/adminhtml_billing_agreement_grid" name="sales.billing.agreement.grid" output="toHtml"/>
     </adminhtml_sales_billing_agreement_grid>
 
     <adminhtml_sales_billing_agreement_view>
         <reference name="content">
-            <block type="sales/adminhtml_billing_agreement_view" name="sales.billing.agreement.view"></block>
+            <block type="sales/adminhtml_billing_agreement_view" name="sales.billing.agreement.view"/>
         </reference>
         <reference name="left">
             <block type="sales/adminhtml_billing_agreement_view_tabs" name="sales.billing.agreement.tabs">
@@ -54,11 +54,12 @@
     </adminhtml_sales_billing_agreement_view>
 
     <adminhtml_sales_billing_agreement_ordersgrid>
-        <block type="sales/adminhtml_billing_agreement_view_tab_orders" name="related.orders.grid" output="toHtml"></block>
+        <block type="sales/adminhtml_billing_agreement_view_tab_orders" name="related.orders.grid" output="toHtml"/>
     </adminhtml_sales_billing_agreement_ordersgrid>
 
     <adminhtml_sales_billing_agreement_customergrid>
-        <block type="sales/adminhtml_customer_edit_tab_agreement" name="customer.billing.agreement.grid" output="toHtml"></block>
+        <block type="sales/adminhtml_customer_edit_tab_agreement" name="customer.billing.agreement.grid"
+               output="toHtml"/>
     </adminhtml_sales_billing_agreement_customergrid>
 
     <adminhtml_sales_order_view>
@@ -67,13 +68,14 @@
             <action method="addJs"><file>mage/adminhtml/giftoptions/tooltip.js</file></action>
         </reference>
         <reference name="content">
-            <block type="adminhtml/sales_order_view" name="sales_order_edit"></block>
+            <block type="adminhtml/sales_order_view" name="sales_order_edit"/>
         </reference>
         <reference name="left">
             <block type="adminhtml/sales_order_view_tabs" name="sales_order_tabs">
                 <block type="adminhtml/sales_order_view_tab_info" name="order_tab_info" template="sales/order/view/tab/info.phtml">
-                    <block type="adminhtml/sales_order_view_messages" name="order_messages"></block>
-                    <block type="adminhtml/sales_order_view_info" name="order_info" template="sales/order/view/info.phtml"></block>
+                    <block type="adminhtml/sales_order_view_messages" name="order_messages"/>
+                    <block type="adminhtml/sales_order_view_info" name="order_info"
+                           template="sales/order/view/info.phtml"/>
                     <block type="adminhtml/sales_order_view_items" name="order_items" template="sales/order/view/items.phtml">
                         <action method="addItemRender"><type>default</type><block>adminhtml/sales_order_view_items_renderer_default</block><template>sales/order/view/items/renderer/default.phtml</template></action>
                         <action method="addColumnRender"><column>qty</column><block>adminhtml/sales_items_column_qty</block><template>sales/items/column/qty.phtml</template></action>
@@ -82,9 +84,11 @@
                         <block type="core/text_list" name="order_item_extra_info" />
                     </block>
                     <block type="adminhtml/sales_order_payment" name="order_payment"/>
-                    <block type="adminhtml/sales_order_view_history" name="order_history" template="sales/order/view/history.phtml"></block>
+                    <block type="adminhtml/sales_order_view_history" name="order_history"
+                           template="sales/order/view/history.phtml"/>
                     <block type="adminhtml/template" name="gift_options" template="sales/order/giftoptions.phtml">
-                        <block type="adminhtml/sales_order_view_giftmessage" name="order_giftmessage" template="sales/order/view/giftmessage.phtml"></block>
+                        <block type="adminhtml/sales_order_view_giftmessage" name="order_giftmessage"
+                               template="sales/order/view/giftmessage.phtml"/>
                     </block>
                     <block type="adminhtml/sales_order_totals" name="order_totals" template="sales/order/totals.phtml">
                         <block type="adminhtml/sales_order_totals_tax" name="tax" template="sales/order/totals/tax.phtml" />
@@ -132,15 +136,17 @@
         <reference name="content">
             <block type="adminhtml/sales_order_invoice_create" name="sales_invoice_create">
                 <block type="adminhtml/sales_order_invoice_create_form" name="form" template="sales/order/invoice/create/form.phtml">
-                    <block type="adminhtml/sales_order_view_info" name="order_info" template="sales/order/view/info.phtml"></block>
-                    <block type="adminhtml/sales_order_payment" name="order_payment"></block>
+                    <block type="adminhtml/sales_order_view_info" name="order_info"
+                           template="sales/order/view/info.phtml"/>
+                    <block type="adminhtml/sales_order_payment" name="order_payment"/>
                     <block type="adminhtml/sales_order_invoice_create_items" name="order_items" template="sales/order/invoice/create/items.phtml">
                         <action method="addItemRender"><type>default</type><block>adminhtml/sales_items_renderer_default</block><template>sales/order/invoice/create/items/renderer/default.phtml</template></action>
                         <action method="addColumnRender"><column>qty</column><block>adminhtml/sales_items_column_qty</block><template>sales/items/column/qty.phtml</template></action>
                         <action method="addColumnRender"><column>name</column><block>adminhtml/sales_items_column_name</block><template>sales/items/column/name.phtml</template></action>
                         <action method="addColumnRender"><column>name</column><block>adminhtml/sales_items_column_name_grouped</block><template>sales/items/column/name.phtml</template><type>grouped</type></action>
-                        <block type="core/text_list" name="order_item_extra_info"></block>
-                        <block type="adminhtml/sales_order_totalbar" name="order_totalbar" template="sales/order/totalbar.phtml"></block>
+                        <block type="core/text_list" name="order_item_extra_info"/>
+                        <block type="adminhtml/sales_order_totalbar" name="order_totalbar"
+                               template="sales/order/totalbar.phtml"/>
 
                         <block type="adminhtml/sales_order_invoice_totals" name="invoice_totals" template="sales/order/totals.phtml">
                             <block type="adminhtml/sales_order_totals_tax" name="tax" template="sales/order/totals/tax.phtml" />
@@ -184,8 +190,8 @@
             <action method="addColumnRender"><column>qty</column><block>adminhtml/sales_items_column_qty</block><template>sales/items/column/qty.phtml</template></action>
             <action method="addColumnRender"><column>name</column><block>adminhtml/sales_items_column_name</block><template>sales/items/column/name.phtml</template></action>
             <action method="addColumnRender"><column>name</column><block>adminhtml/sales_items_column_name_grouped</block><template>sales/items/column/name.phtml</template><type>grouped</type></action>
-            <block type="core/text_list" name="order_item_extra_info"></block>
-            <block type="adminhtml/sales_order_totalbar" name="order_totalbar" template="sales/order/totalbar.phtml"></block>
+            <block type="core/text_list" name="order_item_extra_info"/>
+            <block type="adminhtml/sales_order_totalbar" name="order_totalbar" template="sales/order/totalbar.phtml"/>
             <block type="adminhtml/sales_order_invoice_totals" name="invoice_totals" template="sales/order/totals.phtml">
                 <block type="adminhtml/sales_order_totals_tax" name="tax" template="sales/order/totals/tax.phtml" />
                 <!--<block type="adminhtml/sales_order_totals_item" name="footer" template="sales/order/totals/footer.phtml">
@@ -221,7 +227,8 @@
 
     <adminhtml_sales_order_invoice_addcomment>
         <block type="adminhtml/sales_order_invoice_view_comments" name="invoice_comments">
-            <block type="adminhtml/sales_order_comments_view"  name="order_comments" template="sales/order/comments/view.phtml"></block>
+            <block type="adminhtml/sales_order_comments_view" name="order_comments"
+                   template="sales/order/comments/view.phtml"/>
         </block>
     </adminhtml_sales_order_invoice_addcomment>
 
@@ -229,15 +236,16 @@
         <reference name="content">
             <block type="adminhtml/sales_order_invoice_view" name="sales_invoice_view">
                 <block type="adminhtml/sales_order_invoice_view_form" name="form" template="sales/order/invoice/view/form.phtml">
-                    <block type="adminhtml/sales_order_view_info" name="order_info" template="sales/order/view/info.phtml"></block>
-                    <block type="adminhtml/sales_order_payment" name="order_payment"></block>
+                    <block type="adminhtml/sales_order_view_info" name="order_info"
+                           template="sales/order/view/info.phtml"/>
+                    <block type="adminhtml/sales_order_payment" name="order_payment"/>
 
                     <block type="adminhtml/sales_order_invoice_view_items" name="invoice_items" template="sales/order/invoice/view/items.phtml">
                         <action method="addItemRender"><type>default</type><block>adminhtml/sales_items_renderer_default</block><template>sales/order/invoice/view/items/renderer/default.phtml</template></action>
                         <action method="addColumnRender"><column>qty</column><block>adminhtml/sales_items_column_qty</block><template>sales/items/column/qty.phtml</template></action>
                         <action method="addColumnRender"><column>name</column><block>adminhtml/sales_items_column_name</block><template>sales/items/column/name.phtml</template></action>
                         <action method="addColumnRender"><column>name</column><block>adminhtml/sales_items_column_name_grouped</block><template>sales/items/column/name.phtml</template><type>grouped</type></action>
-                        <block type="core/text_list" name="order_item_extra_info"></block>
+                        <block type="core/text_list" name="order_item_extra_info"/>
                     </block>
                     <block type="adminhtml/sales_order_comments_view" name="order_comments" template="sales/order/comments/view.phtml">
                         <action method="setParentType"><type>invoice</type></action>
@@ -284,14 +292,16 @@
         <reference name="content">
             <block type="adminhtml/sales_order_shipment_create" name="sales_shipment_create">
                 <block type="adminhtml/sales_order_shipment_create_form" name="form" template="sales/order/shipment/create/form.phtml">
-                    <block type="adminhtml/sales_order_view_info" name="order_info" template="sales/order/view/info.phtml"></block>
-                    <block type="adminhtml/sales_order_payment" name="order_payment"></block>
-                    <block type="adminhtml/sales_order_shipment_create_tracking" name="shipment_tracking" template="sales/order/shipment/create/tracking.phtml"></block>
+                    <block type="adminhtml/sales_order_view_info" name="order_info"
+                           template="sales/order/view/info.phtml"/>
+                    <block type="adminhtml/sales_order_payment" name="order_payment"/>
+                    <block type="adminhtml/sales_order_shipment_create_tracking" name="shipment_tracking"
+                           template="sales/order/shipment/create/tracking.phtml"/>
                     <block type="adminhtml/sales_order_shipment_create_items" name="order_items" template="sales/order/shipment/create/items.phtml">
                         <action method="addItemRender"><type>default</type><block>adminhtml/sales_items_renderer_default</block><template>sales/order/shipment/create/items/renderer/default.phtml</template></action>
                         <action method="addColumnRender"><column>qty</column><block>adminhtml/sales_items_column_qty</block><template>sales/items/column/qty.phtml</template></action>
                         <action method="addColumnRender"><column>name</column><block>adminhtml/sales_items_column_name</block><template>sales/items/column/name.phtml</template></action>
-                        <block type="core/text_list" name="order_item_extra_info"></block>
+                        <block type="core/text_list" name="order_item_extra_info"/>
                     </block>
                     <block type="adminhtml/sales_order_shipment_packaging" name="shipment_packaging" template="sales/order/shipment/packaging/popup.phtml" />
                 </block>
@@ -300,16 +310,19 @@
     </adminhtml_sales_order_shipment_new>
 
     <adminhtml_sales_order_shipment_addtrack>
-        <block type="adminhtml/sales_order_shipment_view_tracking" name="shipment_tracking" template="sales/order/shipment/view/tracking.phtml"></block>
+        <block type="adminhtml/sales_order_shipment_view_tracking" name="shipment_tracking"
+               template="sales/order/shipment/view/tracking.phtml"/>
     </adminhtml_sales_order_shipment_addtrack>
 
     <adminhtml_sales_order_shipment_removetrack>
-        <block type="adminhtml/sales_order_shipment_view_tracking" name="shipment_tracking" template="sales/order/shipment/view/tracking.phtml"></block>
+        <block type="adminhtml/sales_order_shipment_view_tracking" name="shipment_tracking"
+               template="sales/order/shipment/view/tracking.phtml"/>
     </adminhtml_sales_order_shipment_removetrack>
 
     <adminhtml_sales_order_shipment_addcomment>
         <block type="adminhtml/sales_order_shipment_view_comments" name="shipment_comments">
-            <block type="adminhtml/sales_order_comments_view"  name="order_comments" template="sales/order/comments/view.phtml"></block>
+            <block type="adminhtml/sales_order_comments_view" name="order_comments"
+                   template="sales/order/comments/view.phtml"/>
         </block>
     </adminhtml_sales_order_shipment_addcomment>
 
@@ -320,16 +333,19 @@
         <reference name="content">
             <block type="adminhtml/sales_order_shipment_view" name="sales_shipment_view">
                 <block type="adminhtml/sales_order_shipment_view_form" name="form" template="sales/order/shipment/view/form.phtml">
-                    <block type="adminhtml/sales_order_view_info" name="order_info" template="sales/order/view/info.phtml"></block>
-                    <block type="adminhtml/sales_order_payment" name="order_payment"></block>
-                    <block type="adminhtml/sales_order_shipment_view_tracking" name="shipment_tracking" template="sales/order/shipment/view/tracking.phtml"></block>
+                    <block type="adminhtml/sales_order_view_info" name="order_info"
+                           template="sales/order/view/info.phtml"/>
+                    <block type="adminhtml/sales_order_payment" name="order_payment"/>
+                    <block type="adminhtml/sales_order_shipment_view_tracking" name="shipment_tracking"
+                           template="sales/order/shipment/view/tracking.phtml"/>
                     <block type="adminhtml/sales_order_shipment_view_items" name="shipment_items" template="sales/order/shipment/view/items.phtml">
                         <action method="addItemRender"><type>default</type><block>adminhtml/sales_items_renderer_default</block><template>sales/order/shipment/view/items/renderer/default.phtml</template></action>
                         <action method="addColumnRender"><column>qty</column><block>adminhtml/sales_items_column_qty</block><template>sales/items/column/qty.phtml</template></action>
                         <action method="addColumnRender"><column>name</column><block>adminhtml/sales_items_column_name</block><template>sales/items/column/name.phtml</template></action>
-                        <block type="core/text_list" name="order_item_extra_info"></block>
+                        <block type="core/text_list" name="order_item_extra_info"/>
                     </block>
-                    <block type="adminhtml/sales_order_invoice_create_tracking" name="invoice_tracking" template="sales/order/shipment/create/tracking.phtml"></block>
+                    <block type="adminhtml/sales_order_invoice_create_tracking" name="invoice_tracking"
+                           template="sales/order/shipment/create/tracking.phtml"/>
                     <block type="adminhtml/sales_order_comments_view"  name="order_comments" template="sales/order/comments/view.phtml">
                         <action method="setParentType"><type>shipment</type></action>
                     </block>
@@ -344,15 +360,17 @@
         <reference name="content">
             <block type="adminhtml/sales_order_creditmemo_create" name="sales_creditmemo_create">
                 <block type="adminhtml/sales_order_creditmemo_create_form" name="form" template="sales/order/creditmemo/create/form.phtml">
-                    <block type="adminhtml/sales_order_view_info" name="order_info" template="sales/order/view/info.phtml"></block>
-                    <block type="adminhtml/sales_order_payment" name="order_payment"></block>
+                    <block type="adminhtml/sales_order_view_info" name="order_info"
+                           template="sales/order/view/info.phtml"/>
+                    <block type="adminhtml/sales_order_payment" name="order_payment"/>
                     <block type="adminhtml/sales_order_creditmemo_create_items" name="order_items" template="sales/order/creditmemo/create/items.phtml">
                         <action method="addItemRender"><type>default</type><block>adminhtml/sales_items_renderer_default</block><template>sales/order/creditmemo/create/items/renderer/default.phtml</template></action>
                         <action method="addColumnRender"><column>qty</column><block>adminhtml/sales_items_column_qty</block><template>sales/items/column/qty.phtml</template></action>
                         <action method="addColumnRender"><column>name</column><block>adminhtml/sales_items_column_name</block><template>sales/items/column/name.phtml</template></action>
                         <action method="addColumnRender"><column>name</column><block>adminhtml/sales_items_column_name_grouped</block><template>sales/items/column/name.phtml</template><type>grouped</type></action>
-                        <block type="core/text_list" name="order_item_extra_info"></block>
-                        <block type="adminhtml/sales_order_totalbar" name="order_totalbar" template="sales/order/totalbar.phtml"></block>
+                        <block type="core/text_list" name="order_item_extra_info"/>
+                        <block type="adminhtml/sales_order_totalbar" name="order_totalbar"
+                               template="sales/order/totalbar.phtml"/>
 
                         <block type="adminhtml/sales_order_creditmemo_totals" name="creditmemo_totals" template="sales/order/totals.phtml">
                             <block type="adminhtml/sales_order_creditmemo_create_adjustments" name="adjustments" template="sales/order/creditmemo/create/totals/adjustments.phtml" />
@@ -389,8 +407,8 @@
             <action method="addColumnRender"><column>qty</column><block>adminhtml/sales_items_column_qty</block><template>sales/items/column/qty.phtml</template></action>
             <action method="addColumnRender"><column>name</column><block>adminhtml/sales_items_column_name</block><template>sales/items/column/name.phtml</template></action>
             <action method="addColumnRender"><column>name</column><block>adminhtml/sales_items_column_name_grouped</block><template>sales/items/column/name.phtml</template><type>grouped</type></action>
-            <block type="core/text_list" name="order_item_extra_info"></block>
-            <block type="adminhtml/sales_order_totalbar" name="order_totalbar" template="sales/order/totalbar.phtml"></block>
+            <block type="core/text_list" name="order_item_extra_info"/>
+            <block type="adminhtml/sales_order_totalbar" name="order_totalbar" template="sales/order/totalbar.phtml"/>
 
             <block type="adminhtml/sales_order_creditmemo_totals" name="creditmemo_totals" template="sales/order/totals.phtml">
                 <block type="adminhtml/sales_order_creditmemo_create_adjustments" name="adjustments" template="sales/order/creditmemo/create/totals/adjustments.phtml" />
@@ -422,7 +440,8 @@
 
     <adminhtml_sales_order_creditmemo_addcomment>
         <block type="adminhtml/sales_order_creditmemo_view_comments" name="creditmemo_comments">
-            <block type="adminhtml/sales_order_comments_view"  name="order_comments" template="sales/order/comments/view.phtml"></block>
+            <block type="adminhtml/sales_order_comments_view" name="order_comments"
+                   template="sales/order/comments/view.phtml"/>
         </block>
     </adminhtml_sales_order_creditmemo_addcomment>
 
@@ -430,14 +449,15 @@
         <reference name="content">
             <block type="adminhtml/sales_order_creditmemo_view" name="sales_creditmemo_view">
                 <block type="adminhtml/sales_order_creditmemo_view_form" name="form" template="sales/order/creditmemo/view/form.phtml">
-                    <block type="adminhtml/sales_order_view_info" name="order_info" template="sales/order/view/info.phtml"></block>
-                    <block type="adminhtml/sales_order_payment" name="order_payment"></block>
+                    <block type="adminhtml/sales_order_view_info" name="order_info"
+                           template="sales/order/view/info.phtml"/>
+                    <block type="adminhtml/sales_order_payment" name="order_payment"/>
                     <block type="adminhtml/sales_order_creditmemo_view_items" name="creditmemo_items" template="sales/order/creditmemo/view/items.phtml">
                         <action method="addItemRender"><type>default</type><block>adminhtml/sales_items_renderer_default</block><template>sales/order/creditmemo/view/items/renderer/default.phtml</template></action>
                         <action method="addColumnRender"><column>qty</column><block>adminhtml/sales_items_column_qty</block><template>sales/items/column/qty.phtml</template></action>
                         <action method="addColumnRender"><column>name</column><block>adminhtml/sales_items_column_name</block><template>sales/items/column/name.phtml</template></action>
                         <action method="addColumnRender"><column>name</column><block>adminhtml/sales_items_column_name_grouped</block><template>sales/items/column/name.phtml</template><type>grouped</type></action>
-                        <block type="core/text_list" name="order_item_extra_info"></block>
+                        <block type="core/text_list" name="order_item_extra_info"/>
                     </block>
                     <block type="adminhtml/sales_order_comments_view" name="order_comments" template="sales/order/comments/view.phtml">
                         <action method="setParentType"><type>creditmemo</type></action>
@@ -477,12 +497,12 @@
 
     <adminhtml_sales_transactions_index>
         <reference name="content">
-            <block type="adminhtml/sales_transactions" name="sales_transactions.grid.container"></block>
+            <block type="adminhtml/sales_transactions" name="sales_transactions.grid.container"/>
         </reference>
     </adminhtml_sales_transactions_index>
 
     <adminhtml_sales_transactions_grid>
-        <block type="adminhtml/sales_transactions_grid" name="sales_transactions.grid" output="toHtml"></block>
+        <block type="adminhtml/sales_transactions_grid" name="sales_transactions.grid" output="toHtml"/>
     </adminhtml_sales_transactions_grid>
 
     <adminhtml_sales_transactions_view>
@@ -556,7 +576,7 @@
                         <block type="adminhtml/template" name="gift_options" template="sales/order/giftoptions.phtml">
                             <block type="adminhtml/sales_order_create_giftmessage" template="sales/order/create/giftmessage.phtml" name="giftmessage" />
                         </block>
-                        <block type="core/text_list" name="order_item_extra_info"></block>
+                        <block type="core/text_list" name="order_item_extra_info"/>
                     </block>
                 </block>
             </block>
@@ -618,7 +638,7 @@
                 <block type="adminhtml/template" name="gift_options" template="sales/order/giftoptions.phtml">
                     <block type="adminhtml/sales_order_create_giftmessage" template="sales/order/create/giftmessage.phtml" name="giftmessage" />
                 </block>
-                <block type="core/text_list" name="order_item_extra_info"></block>
+                <block type="core/text_list" name="order_item_extra_info"/>
             </block>
         </reference>
     </adminhtml_sales_order_create_load_block_data>
@@ -708,7 +728,7 @@
                     </block>
                 </block>
             </block>
-            <block type="core/text_list" name="order_item_extra_info"></block>
+            <block type="core/text_list" name="order_item_extra_info"/>
         </reference>
     </adminhtml_sales_order_create_load_block_items>
 
@@ -970,7 +990,8 @@
     </adminhtml_sales_recurring_profile_grid>
 
     <adminhtml_sales_recurring_profile_customergrid>
-        <block type="sales/adminhtml_customer_edit_tab_recurring_profile" name="customer.recurring.profile.grid" output="toHtml"></block>
+        <block type="sales/adminhtml_customer_edit_tab_recurring_profile" name="customer.recurring.profile.grid"
+               output="toHtml"/>
     </adminhtml_sales_recurring_profile_customergrid>
 
     <adminhtml_sales_recurring_profile_view>
@@ -1044,25 +1065,25 @@
 
     <adminhtml_sales_order_status_index>
         <reference name="content">
-            <block type="adminhtml/sales_order_status" name="sales_order_status.grid.container"></block>
+            <block type="adminhtml/sales_order_status" name="sales_order_status.grid.container"/>
         </reference>
     </adminhtml_sales_order_status_index>
 
     <adminhtml_sales_order_status_new>
         <reference name="content">
-            <block type="adminhtml/sales_order_status_new" name="sales_order_status.new.container"></block>
+            <block type="adminhtml/sales_order_status_new" name="sales_order_status.new.container"/>
         </reference>
     </adminhtml_sales_order_status_new>
 
     <adminhtml_sales_order_status_edit>
         <reference name="content">
-            <block type="adminhtml/sales_order_status_edit" name="sales_order_status.edit.container"></block>
+            <block type="adminhtml/sales_order_status_edit" name="sales_order_status.edit.container"/>
         </reference>
     </adminhtml_sales_order_status_edit>
 
     <adminhtml_sales_order_status_assign>
         <reference name="content">
-            <block type="adminhtml/sales_order_status_assign" name="sales_order_status.assign.container"></block>
+            <block type="adminhtml/sales_order_status_assign" name="sales_order_status.assign.container"/>
         </reference>
     </adminhtml_sales_order_status_assign>
 
@@ -1071,7 +1092,7 @@
             <block type="adminhtml/template" name="optional_zip_countries" as="optional_zip_countries" template="directory/js/optional_zip_countries.phtml" />
         </reference>
         <reference name="content">
-            <block type="adminhtml/sales_order_address" name="sales_order_address.form.container"></block>
+            <block type="adminhtml/sales_order_address" name="sales_order_address.form.container"/>
         </reference>
     </adminhtml_sales_order_address>
 </layout>
